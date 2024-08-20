@@ -60,7 +60,10 @@ const Password = () => {
             name="length"
             id="range"
             value={length}
-            onChange={(e) => setLength(e.target.value)}
+            onChange={(e) => {
+              setLength(e.target.value);
+              handleGeneratePassword(e);
+            }}
             min="4"
             max="20"
             className="w-full"
